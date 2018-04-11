@@ -7,10 +7,27 @@
         }
     }
 
+
+    function getPathAction($route)
+    {
+        $segments = explode('\\', $route);
+        $controller = array_pop($segments);
+        $controllerPath = '/';
+
+        do {
+            if(count($segments)===0){
+              return array ($controller, $controllerPath);
+              } else {
+                  $segment = array_shift($segments);
+                  $controllerPath = $controllerPath . $segment . '/';
+              }
+           } while (count($segments)>=0);
+    }
+
     // получаем строку запроса
 
     $uri = getURI();
-    
+
     $filename = CONFIG.'routes'.EXT;
 
     if (file_exists($filename)) {
@@ -24,26 +41,42 @@
     foreach ($routes as $route => $path) {
 
         //Сравниваем route и $uri
-        if ($route == $uri) {
-        
+        if ($route === $uri) {
+
             // Определить контроллер
-                
-            $controllerName = $path;
-            
-            //Подключаем файл контроллера
-            $controllerFile = CONTROLLERS . $controllerName . EXT;
-        
+
+            // $controllerName = $path;
+            // Подключаем файл контроллера
+            // $controllerFile = CONTROLLERS . $controllerName . EXT;
+
+            //
+            // if (file_exists($controllerFile)) {
+            //     include_once $controllerFile;
+            //     $result = true;
+            // }
+
+            list($controller, $controllerPath) = getPathAction($path);
+
+            // print_r($controller);
+            // echo "<br>";
+            //
+            // print_r($controllerPath);
+            // echo "<br>";
+            // $result = true;
+
+            $controllerFile = CONTROLLERS .$controllerPath . $controller . EXT;
+
             if (file_exists($controllerFile)) {
                 include_once $controllerFile;
                 $result = true;
             }
-            
+
             if ($result !== null) {
                 break;
             }
         }
     }
-        
+
     if ($result === null) {
             include_once VIEWS.'errors/404'.EXT;
     }

@@ -1,3 +1,3 @@
 <?php
 
-require_once VIEWS.'home/about.php';
+render('home/about', ['title'=>'About <b>Our Cats</b>']);

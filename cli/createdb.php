@@ -1,29 +1,24 @@
 <?php
-$servername = "localhost";
-$username = "dev";
-$password = "ghbdtn";
+
+$host = "localhost";
+$user = "root";
+$pass = "ghbdtn";
+// $dbname = "mydb";
 
 // Create connection
-$conn = mysqli_connect($servername, $username, $password);
+try {
+  $DBH = new PDO("mysql:host=$host;", $user, $pass);
+  $DBH->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
 
-/* проверка соединения */
-if (mysqli_connect_errno()) {
-    printf("Не удалось подключиться: %s\n", mysqli_connect_error());
-    exit();
+  // Create database
+  $sql = "CREATE DATABASE shopping";
+  $DBH->exec($sql);
+  echo "Database created successfully\n\n";
 }
-
-echo "Connected successfully\n\n";
-
-// Create database
-$sql = "CREATE DATABASE mydb";
-
-if (mysqli_query($conn, $sql)) {
-    echo "Database created successfully\n\n";
-
-} else {
-    // echo "Error creating database: " . mysqli_error($conn);
-    printf("Error creating database: %s\n", mysqli_error($conn));
+catch(PDOException $e) {
+    echo "SQL, у нас проблемы.\n" . $e->getMessage();
+    file_put_contents('PDOErrors.log', $e->getMessage(), FILE_APPEND);
 }
-
-mysqli_close($conn);
-?>
+finally {
+    $DBH = null;
+}

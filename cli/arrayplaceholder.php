@@ -11,10 +11,18 @@ try {
   $DBH->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
 
   // sql
+  $stmt = $DBH->prepare("INSERT INTO categories (name, status) VALUES (?, ?)");
 
-  $sql = "INSERT INTO categories(name, status) VALUES('earth', 1), ('mars', 1), ('jupiter', 1)";
+  $stmt->bindParam(1, $name);
+  $stmt->bindParam(2, $status);
 
-  $DBH->exec($sql);
+  # набор данных, которые мы будем вставлять
+  $data = array(['Black Cat', 1], ['Green Cat', 1]);
+
+  $stmt = $DBH->prepare("INSERT INTO categories(name, status) values (?, ?)");
+
+  $stmt->execute($data[1]);
+
 
   echo "Table updated successfully\n\n";
 }
