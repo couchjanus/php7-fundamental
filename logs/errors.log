@@ -1,0 +1,43 @@
+[12-Apr-2018 15:07:31 Europe/Kiev] PHP Fatal error:  Uncaught Error: Class 'BlogController' not found in /home/janus/www/php7-fundamental/core/Router.php:54
+Stack trace:
+#0 /home/janus/www/php7-fundamental/bootstrap/bootstrap.php(47): require_once()
+#1 /home/janus/www/php7-fundamental/public/index.php(2): require_once('/home/janus/www...')
+#2 {main}
+  thrown in /home/janus/www/php7-fundamental/core/Router.php on line 54
+[12-Apr-2018 15:13:51 Europe/Kiev] PHP Fatal error:  Uncaught Error: Class 'BlogController' not found in /home/janus/www/php7-fundamental/core/Router.php:54
+Stack trace:
+#0 /home/janus/www/php7-fundamental/bootstrap/bootstrap.php(47): require_once()
+#1 /home/janus/www/php7-fundamental/public/index.php(2): require_once('/home/janus/www...')
+#2 {main}
+  thrown in /home/janus/www/php7-fundamental/core/Router.php on line 54
+[12-Apr-2018 15:13:55 Europe/Kiev] PHP Fatal error:  Uncaught Error: Class 'ContactController' not found in /home/janus/www/php7-fundamental/core/Router.php:54
+Stack trace:
+#0 /home/janus/www/php7-fundamental/bootstrap/bootstrap.php(47): require_once()
+#1 /home/janus/www/php7-fundamental/public/index.php(2): require_once('/home/janus/www...')
+#2 {main}
+  thrown in /home/janus/www/php7-fundamental/core/Router.php on line 54
+[12-Apr-2018 15:27:21 Europe/Kiev] PHP Fatal error:  Uncaught Error: Class 'GuestbookController' not found in /home/janus/www/php7-fundamental/core/Router.php:54
+Stack trace:
+#0 /home/janus/www/php7-fundamental/bootstrap/bootstrap.php(50): require_once()
+#1 /home/janus/www/php7-fundamental/public/index.php(2): require_once('/home/janus/www...')
+#2 {main}
+  thrown in /home/janus/www/php7-fundamental/core/Router.php on line 54
+[12-Apr-2018 16:35:23 Europe/Kiev] PHP Notice:  Undefined offset: 1 in /home/janus/www/php7-fundamental/core/Router.php on line 52
+[12-Apr-2018 16:35:42 Europe/Kiev] PHP Fatal error:  Uncaught Error: Class 'GuestbookController' not found in /home/janus/www/php7-fundamental/core/Router.php:59
+Stack trace:
+#0 /home/janus/www/php7-fundamental/bootstrap/bootstrap.php(52): require_once()
+#1 /home/janus/www/php7-fundamental/public/index.php(2): require_once('/home/janus/www...')
+#2 {main}
+  thrown in /home/janus/www/php7-fundamental/core/Router.php on line 59
+[12-Apr-2018 16:43:06 Europe/Kiev] PHP Notice:  Undefined variable: categories in /home/janus/www/php7-fundamental/views/admin/categories/index.php on line 31
+[12-Apr-2018 16:43:06 Europe/Kiev] PHP Warning:  Invalid argument supplied for foreach() in /home/janus/www/php7-fundamental/views/admin/categories/index.php on line 31
+[12-Apr-2018 16:59:12 Europe/Kiev] PHP Warning:  require(/home/janus/www/php7-fundamental/views//admin/posts/index.php): failed to open stream: No such file or directory in /home/janus/www/php7-fundamental/core/View.php on line 8
+[12-Apr-2018 16:59:12 Europe/Kiev] PHP Fatal error:  require(): Failed opening required '/home/janus/www/php7-fundamental/views//admin/posts/index.php' (include_path='.:/usr/share/php') in /home/janus/www/php7-fundamental/core/View.php on line 8
+[12-Apr-2018 16:59:58 Europe/Kiev] PHP Warning:  require(/home/janus/www/php7-fundamental/views//admin/posts/index.php): failed to open stream: No such file or directory in /home/janus/www/php7-fundamental/core/View.php on line 8
+[12-Apr-2018 16:59:58 Europe/Kiev] PHP Fatal error:  require(): Failed opening required '/home/janus/www/php7-fundamental/views//admin/posts/index.php' (include_path='.:/usr/share/php') in /home/janus/www/php7-fundamental/core/View.php on line 8
+[12-Apr-2018 17:04:12 Europe/Kiev] PHP Fatal error:  Uncaught Error: Class 'GuestbookController' not found in /home/janus/www/php7-fundamental/core/Router.php:58
+Stack trace:
+#0 /home/janus/www/php7-fundamental/bootstrap/bootstrap.php(52): require_once()
+#1 /home/janus/www/php7-fundamental/public/index.php(2): require_once('/home/janus/www...')
+#2 {main}
+  thrown in /home/janus/www/php7-fundamental/core/Router.php on line 58

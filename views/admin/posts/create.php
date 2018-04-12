@@ -18,13 +18,19 @@ include_once VIEWS.'shared/admin/header.php';
                     <a href="#" data-rel="reload"><i class="glyphicon glyphicon-cog"></i></a>
                 </div>
           </div>
-          <form class="form-horizontal" method="POST" role="form" id="idForm">
+          <form class="form-horizontal" role="form" method="POST"  id="idForm">
 
             <div class="panel-body">
                 <div class="form-group">
-                        <label for="name" class="col-sm-2 control-label">Category Name</label>
+                        <label for="title" class="col-sm-2 control-label">Post Title</label>
                         <div class="col-sm-10">
-                          <input type="text" class="form-control" id="name" name="name" placeholder="Category Name">
+                          <input type="text" class="form-control" id="title" name="title" placeholder="Post Title">
+                        </div>
+                </div>
+                <div class="form-group">
+                        <label class="col-sm-2 control-label" for="content">Post Content</label>
+                        <div class="col-sm-10">
+                           <textarea class="form-control" id="content" name="content">Post Content</textarea>
                         </div>
                 </div>
 
@@ -37,10 +43,12 @@ include_once VIEWS.'shared/admin/header.php';
                             </select>
                         </div>
                 </div>
-            </div>
+
+                <hr>
+
             <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10">
-                  <button id="save" type="submit" class="save btn btn-primary">Add Category</button>
+                  <button id="save" type="submit" class="save btn btn-primary">Add Post</button>
                 </div>
             </div>
           </form>

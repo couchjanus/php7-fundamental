@@ -6,7 +6,7 @@
     define('CONFIG', ROOT.'/config/');
     define('CORE', ROOT.'/core/');
 
-    // define('DB', ROOT.'/db/');
+    define('LOGS', ROOT.'/logs/');
 
     define('EXT', '.php');
     define('APPNAME', 'Great Shopaholic');

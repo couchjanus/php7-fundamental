@@ -45,29 +45,22 @@
 
             // Определить контроллер
 
-            // $controllerName = $path;
-            // Подключаем файл контроллера
-            // $controllerFile = CONTROLLERS . $controllerName . EXT;
+            // list($controller, $controllerPath) = getPathAction($path);
+            // $action = 'index';
 
-            //
-            // if (file_exists($controllerFile)) {
-            //     include_once $controllerFile;
-            //     $result = true;
-            // }
-
-            list($controller, $controllerPath) = getPathAction($path);
-
-            // print_r($controller);
-            // echo "<br>";
-            //
-            // print_r($controllerPath);
-            // echo "<br>";
-            // $result = true;
+            list($segments, $controllerPath) = getPathAction($path);
+            list($controller, $action) = explode('@', $segments);
 
             $controllerFile = CONTROLLERS .$controllerPath . $controller . EXT;
 
             if (file_exists($controllerFile)) {
                 include_once $controllerFile;
+                $controller = new $controller;
+
+                if (method_exists($controller, $action)) {
+                  $controller->$action();
+                }
+
                 $result = true;
             }
 
