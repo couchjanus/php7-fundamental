@@ -15,13 +15,13 @@
         $controllerPath = '/';
 
         do {
-            if(count($segments)===0){
-              return array ($controller, $controllerPath);
-              } else {
-                  $segment = array_shift($segments);
-                  $controllerPath = $controllerPath . $segment . '/';
-              }
-           } while (count($segments)>=0);
+            if (count($segments)===0) {
+                return array ($controller, $controllerPath);
+            } else {
+                $segment = array_shift($segments);
+                $controllerPath = $controllerPath . $segment . '/';
+            }
+        } while (count($segments)>=0);
     }
 
     // получаем строку запроса
@@ -45,11 +45,12 @@
 
             // Определить контроллер
 
-            // list($controller, $controllerPath) = getPathAction($path);
-            // $action = 'index';
+            list($controller, $controllerPath) = getPathAction($path);
+            $action = 'index';
 
-            list($segments, $controllerPath) = getPathAction($path);
-            list($controller, $action) = explode('@', $segments);
+
+            // list($segments, $controllerPath) = getPathAction($path);
+            // list($controller, $action) = explode('@', $segments);
 
             $controllerFile = CONTROLLERS .$controllerPath . $controller . EXT;
 
@@ -58,7 +59,7 @@
                 $controller = new $controller;
 
                 if (method_exists($controller, $action)) {
-                  $controller->$action();
+                    $controller->$action();
                 }
 
                 $result = true;

@@ -76,15 +76,8 @@ catch(PDOException $e) {
 
 
 
-// // Create database
-// $sql = "CREATE DATABASE mydb";
-//
-// if (mysqli_query($conn, $sql)) {
-//     echo "Database created successfully\n\n";
-//
-// } else {
-//     // echo "Error creating database: " . mysqli_error($conn);
-//     printf("Error creating database: %s\n", mysqli_error($conn));
-// }
-//
-// mysqli_close($conn);
+// Классы нужно хранить в отдельных файлах, 
+// необходимо не забыть подключить файл с классом-предком 
+// в файле с классом-наследником. 
+// Обычно это делается при помощи функции require_once 
+// чтобы избежать повторного подключения одного и того же файла.
