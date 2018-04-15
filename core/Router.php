@@ -45,12 +45,9 @@
 
             // Определить контроллер
 
-            list($controller, $controllerPath) = getPathAction($path);
-            $action = 'index';
+            list($segments, $controllerPath) = getPathAction($path);
 
-
-            // list($segments, $controllerPath) = getPathAction($path);
-            // list($controller, $action) = explode('@', $segments);
+            list($controller, $action) = explode('@', $segments);
 
             $controllerFile = CONTROLLERS .$controllerPath . $controller . EXT;
 
@@ -60,6 +57,7 @@
 
                 if (method_exists($controller, $action)) {
                     $controller->$action();
+                   
                 }
 
                 $result = true;
