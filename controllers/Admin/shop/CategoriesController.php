@@ -2,7 +2,8 @@
 /**
  * Контроллер для управления категориями
 */
-class CategoriesController extends Controller{
+class CategoriesController extends Controller
+{
 
     /**
      * Главная страница управления категориями

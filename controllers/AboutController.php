@@ -1,15 +1,14 @@
 <?php
 
-class AboutController
+class AboutController  extends Controller
 {
-    public function __construct()
-    {
-      render('home/about', ['title'=>'About <b>Our Cats</b>']);
-    }
-
+   
     public function index()
     {
-
+      $data['title'] = 'About <b>Our Best Cats</b>';
+      $data['subtitle'] = 'Catch my Cats';
+      
+      $this->_view->render('home/about', $data);
     }
 
 }

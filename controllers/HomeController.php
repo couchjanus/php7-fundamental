@@ -1,13 +1,13 @@
 <?php
 
-class HomeController
+class HomeController extends Controller
 {
-
+    
     public function index()
     {
-        $title = 'Our <b>Best Cat Members</b>';
+        $data['title'] = 'Our <b>Best Cat Members</b>';
 
-        require_once VIEWS.'home/index.php';
+        $this->_view->render('home/about', $data);
     }
 
 }

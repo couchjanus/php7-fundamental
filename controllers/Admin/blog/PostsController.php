@@ -1,6 +1,7 @@
 <?php
 
-class PostsController extends Controller {
+class PostsController extends Controller 
+{
 
     public function index()
     {
