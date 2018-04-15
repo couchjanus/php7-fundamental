@@ -6,7 +6,7 @@
 $host = 'localhost';
 $db   = 'shopping';
 $user = 'root';
-$password = 'ghbdtn';
+$password = '';
 $charset = 'utf8';
 
 return [
