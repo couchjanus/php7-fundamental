@@ -44,5 +44,8 @@ include_once VIEWS.'shared/admin/header.php';
                     </div>
                 </div>
             </div>
+          </div>
+        </div>
+      </div>
 <?php
 include_once VIEWS.'shared/admin/footer.php';

@@ -6,7 +6,7 @@
             </div>
 
          </div>
-      </footer>
+     </footer>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="/js/jquery.min.js"></script>

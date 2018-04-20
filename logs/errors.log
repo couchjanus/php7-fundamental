@@ -41,3 +41,308 @@ Stack trace:
 #1 /home/janus/www/php7-fundamental/public/index.php(2): require_once('/home/janus/www...')
 #2 {main}
   thrown in /home/janus/www/php7-fundamental/core/Router.php on line 58
+[16-Apr-2018 21:26:24 Europe/Kiev] PHP Notice:  Undefined variable: result in /home/janus/www/php7-fundamental/core/Router.php on line 74
+[16-Apr-2018 21:27:31 Europe/Kiev] PHP Deprecated:  Non-static method Post::selectAll() should not be called statically in /home/janus/www/php7-fundamental/controllers/Admin/blog/PostsController.php on line 12
+[16-Apr-2018 21:27:32 Europe/Kiev] PHP Fatal error:  Uncaught Error: Using $this when not in object context in /home/janus/www/php7-fundamental/models/Post.php:10
+Stack trace:
+#0 /home/janus/www/php7-fundamental/controllers/Admin/blog/PostsController.php(12): Post::selectAll()
+#1 /home/janus/www/php7-fundamental/core/Router.php(57): PostsController->index()
+#2 /home/janus/www/php7-fundamental/bootstrap/bootstrap.php(27): require_once('/home/janus/www...')
+#3 /home/janus/www/php7-fundamental/public/index.php(2): require_once('/home/janus/www...')
+#4 {main}
+  thrown in /home/janus/www/php7-fundamental/models/Post.php on line 10
+[16-Apr-2018 21:28:04 Europe/Kiev] PHP Fatal error:  Uncaught Error: Using $this when not in object context in /home/janus/www/php7-fundamental/models/Post.php:10
+Stack trace:
+#0 /home/janus/www/php7-fundamental/controllers/Admin/blog/PostsController.php(12): Post::selectAll()
+#1 /home/janus/www/php7-fundamental/core/Router.php(57): PostsController->index()
+#2 /home/janus/www/php7-fundamental/bootstrap/bootstrap.php(27): require_once('/home/janus/www...')
+#3 /home/janus/www/php7-fundamental/public/index.php(2): require_once('/home/janus/www...')
+#4 {main}
+  thrown in /home/janus/www/php7-fundamental/models/Post.php on line 10
+[16-Apr-2018 21:29:01 Europe/Kiev] PHP Fatal error:  Uncaught Error: Using $this when not in object context in /home/janus/www/php7-fundamental/models/Post.php:11
+Stack trace:
+#0 /home/janus/www/php7-fundamental/controllers/Admin/blog/PostsController.php(12): Post::selectAll()
+#1 /home/janus/www/php7-fundamental/core/Router.php(57): PostsController->index()
+#2 /home/janus/www/php7-fundamental/bootstrap/bootstrap.php(27): require_once('/home/janus/www...')
+#3 /home/janus/www/php7-fundamental/public/index.php(2): require_once('/home/janus/www...')
+#4 {main}
+  thrown in /home/janus/www/php7-fundamental/models/Post.php on line 11
+[16-Apr-2018 21:29:44 Europe/Kiev] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in /home/janus/www/php7-fundamental/views/admin/posts/index.php:33
+Stack trace:
+#0 /home/janus/www/php7-fundamental/core/View.php(8): require()
+#1 /home/janus/www/php7-fundamental/controllers/Admin/blog/PostsController.php(17): View->render('admin/posts/ind...', Array)
+#2 /home/janus/www/php7-fundamental/core/Router.php(57): PostsController->index()
+#3 /home/janus/www/php7-fundamental/bootstrap/bootstrap.php(27): require_once('/home/janus/www...')
+#4 /home/janus/www/php7-fundamental/public/index.php(2): require_once('/home/janus/www...')
+#5 {main}
+  thrown in /home/janus/www/php7-fundamental/views/admin/posts/index.php on line 33
+[16-Apr-2018 21:41:29 Europe/Kiev] PHP Notice:  Undefined variable: result in /home/janus/www/php7-fundamental/core/Router.php on line 69
+[16-Apr-2018 23:32:39 Europe/Kiev] PHP Deprecated:  Non-static method Post::store() should not be called statically in /home/janus/www/php7-fundamental/controllers/Admin/blog/PostsController.php on line 31
+[16-Apr-2018 23:32:39 Europe/Kiev] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'status' in 'field list' in /home/janus/www/php7-fundamental/models/Post.php:16
+Stack trace:
+#0 /home/janus/www/php7-fundamental/models/Post.php(16): PDO->prepare('INSERT INTO pos...')
+#1 /home/janus/www/php7-fundamental/controllers/Admin/blog/PostsController.php(31): Post::store(Array)
+#2 /home/janus/www/php7-fundamental/core/Router.php(57): PostsController->create()
+#3 /home/janus/www/php7-fundamental/bootstrap/bootstrap.php(27): require_once('/home/janus/www...')
+#4 /home/janus/www/php7-fundamental/public/index.php(2): require_once('/home/janus/www...')
+#5 {main}
+  thrown in /home/janus/www/php7-fundamental/models/Post.php on line 16
+[16-Apr-2018 23:33:00 Europe/Kiev] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'status' in 'field list' in /home/janus/www/php7-fundamental/models/Post.php:16
+Stack trace:
+#0 /home/janus/www/php7-fundamental/models/Post.php(16): PDO->prepare('INSERT INTO pos...')
+#1 /home/janus/www/php7-fundamental/controllers/Admin/blog/PostsController.php(31): Post::store(Array)
+#2 /home/janus/www/php7-fundamental/core/Router.php(57): PostsController->create()
+#3 /home/janus/www/php7-fundamental/bootstrap/bootstrap.php(27): require_once('/home/janus/www...')
+#4 /home/janus/www/php7-fundamental/public/index.php(2): require_once('/home/janus/www...')
+#5 {main}
+  thrown in /home/janus/www/php7-fundamental/models/Post.php on line 16
+[17-Apr-2018 00:11:26 Europe/Kiev] PHP Notice:  Undefined index: user in /home/janus/www/php7-fundamental/core/Connection.php on line 11
+[17-Apr-2018 00:12:21 Europe/Kiev] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in /home/janus/www/php7-fundamental/views/admin/posts/index.php:33
+Stack trace:
+#0 /home/janus/www/php7-fundamental/core/View.php(8): require()
+#1 /home/janus/www/php7-fundamental/controllers/Admin/blog/PostsController.php(19): View->render('admin/posts/ind...', Array)
+#2 /home/janus/www/php7-fundamental/core/Router.php(57): PostsController->index()
+#3 /home/janus/www/php7-fundamental/bootstrap/bootstrap.php(38): require_once('/home/janus/www...')
+#4 /home/janus/www/php7-fundamental/public/index.php(2): require_once('/home/janus/www...')
+#5 {main}
+  thrown in /home/janus/www/php7-fundamental/views/admin/posts/index.php on line 33
+[17-Apr-2018 22:28:25 Europe/Kiev] PHP Warning:  array_key_exists() expects exactly 2 parameters, 1 given in /home/janus/www/php7-fundamental/core/Router.php on line 43
+[17-Apr-2018 22:28:25 Europe/Kiev] PHP Warning:  Use of undefined constant routes - assumed 'routes' (this will throw an Error in a future version of PHP) in /home/janus/www/php7-fundamental/core/Router.php on line 48
+[17-Apr-2018 22:28:25 Europe/Kiev] PHP Warning:  Invalid argument supplied for foreach() in /home/janus/www/php7-fundamental/core/Router.php on line 48
+[17-Apr-2018 22:28:25 Europe/Kiev] PHP Fatal error:  Uncaught Exception: No route defined for this URI. in /home/janus/www/php7-fundamental/core/Router.php:59
+Stack trace:
+#0 /home/janus/www/php7-fundamental/core/Router.php(77): directPath('admin')
+#1 /home/janus/www/php7-fundamental/bootstrap/bootstrap.php(38): require_once('/home/janus/www...')
+#2 /home/janus/www/php7-fundamental/public/index.php(2): require_once('/home/janus/www...')
+#3 {main}
+  thrown in /home/janus/www/php7-fundamental/core/Router.php on line 59
+[17-Apr-2018 22:29:32 Europe/Kiev] PHP Notice:  Undefined variable: routes in /home/janus/www/php7-fundamental/core/Router.php on line 43
+[17-Apr-2018 22:29:32 Europe/Kiev] PHP Warning:  array_key_exists() expects parameter 2 to be array, null given in /home/janus/www/php7-fundamental/core/Router.php on line 43
+[17-Apr-2018 22:29:32 Europe/Kiev] PHP Warning:  Use of undefined constant routes - assumed 'routes' (this will throw an Error in a future version of PHP) in /home/janus/www/php7-fundamental/core/Router.php on line 48
+[17-Apr-2018 22:29:32 Europe/Kiev] PHP Warning:  Invalid argument supplied for foreach() in /home/janus/www/php7-fundamental/core/Router.php on line 48
+[17-Apr-2018 22:29:32 Europe/Kiev] PHP Fatal error:  Uncaught Exception: No route defined for this URI. in /home/janus/www/php7-fundamental/core/Router.php:59
+Stack trace:
+#0 /home/janus/www/php7-fundamental/core/Router.php(77): directPath('admin')
+#1 /home/janus/www/php7-fundamental/bootstrap/bootstrap.php(38): require_once('/home/janus/www...')
+#2 /home/janus/www/php7-fundamental/public/index.php(2): require_once('/home/janus/www...')
+#3 {main}
+  thrown in /home/janus/www/php7-fundamental/core/Router.php on line 59
+[17-Apr-2018 22:35:00 Europe/Kiev] PHP Parse error:  syntax error, unexpected ';', expecting ',' or ')' in /home/janus/www/php7-fundamental/core/Router.php on line 3
+[17-Apr-2018 22:36:16 Europe/Kiev] PHP Warning:  Use of undefined constant routes - assumed 'routes' (this will throw an Error in a future version of PHP) in /home/janus/www/php7-fundamental/core/Router.php on line 48
+[17-Apr-2018 22:36:16 Europe/Kiev] PHP Warning:  Illegal string offset 'admin' in /home/janus/www/php7-fundamental/core/Router.php on line 48
+[17-Apr-2018 22:36:16 Europe/Kiev] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function callAction(), 2 passed in /home/janus/www/php7-fundamental/core/Router.php on line 48 and at least 3 expected in /home/janus/www/php7-fundamental/core/Router.php:30
+Stack trace:
+#0 /home/janus/www/php7-fundamental/core/Router.php(48): callAction('r', '/')
+#1 /home/janus/www/php7-fundamental/core/Router.php(80): directPath('admin')
+#2 /home/janus/www/php7-fundamental/bootstrap/bootstrap.php(38): require_once('/home/janus/www...')
+#3 /home/janus/www/php7-fundamental/public/index.php(2): require_once('/home/janus/www...')
+#4 {main}
+  thrown in /home/janus/www/php7-fundamental/core/Router.php on line 30
+[17-Apr-2018 22:36:38 Europe/Kiev] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function callAction(), 2 passed in /home/janus/www/php7-fundamental/core/Router.php on line 48 and at least 3 expected in /home/janus/www/php7-fundamental/core/Router.php:30
+Stack trace:
+#0 /home/janus/www/php7-fundamental/core/Router.php(48): callAction('DashboardContro...', '/Admin/')
+#1 /home/janus/www/php7-fundamental/core/Router.php(80): directPath('admin')
+#2 /home/janus/www/php7-fundamental/bootstrap/bootstrap.php(38): require_once('/home/janus/www...')
+#3 /home/janus/www/php7-fundamental/public/index.php(2): require_once('/home/janus/www...')
+#4 {main}
+  thrown in /home/janus/www/php7-fundamental/core/Router.php on line 30
+[17-Apr-2018 22:37:30 Europe/Kiev] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function callAction(), 2 passed in /home/janus/www/php7-fundamental/core/Router.php on line 48 and at least 3 expected in /home/janus/www/php7-fundamental/core/Router.php:30
+Stack trace:
+#0 /home/janus/www/php7-fundamental/core/Router.php(48): callAction('DashboardContro...', '/Admin/')
+#1 /home/janus/www/php7-fundamental/core/Router.php(80): directPath('admin')
+#2 /home/janus/www/php7-fundamental/bootstrap/bootstrap.php(38): require_once('/home/janus/www...')
+#3 /home/janus/www/php7-fundamental/public/index.php(2): require_once('/home/janus/www...')
+#4 {main}
+  thrown in /home/janus/www/php7-fundamental/core/Router.php on line 30
+[17-Apr-2018 22:39:33 Europe/Kiev] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function callAction(), 2 passed in /home/janus/www/php7-fundamental/core/Router.php on line 47 and at least 3 expected in /home/janus/www/php7-fundamental/core/Router.php:30
+Stack trace:
+#0 /home/janus/www/php7-fundamental/core/Router.php(47): callAction('DashboardContro...', '/Admin/')
+#1 /home/janus/www/php7-fundamental/core/Router.php(78): directPath('admin')
+#2 /home/janus/www/php7-fundamental/bootstrap/bootstrap.php(38): require_once('/home/janus/www...')
+#3 /home/janus/www/php7-fundamental/public/index.php(2): require_once('/home/janus/www...')
+#4 {main}
+  thrown in /home/janus/www/php7-fundamental/core/Router.php on line 30
+[17-Apr-2018 22:42:40 Europe/Kiev] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function callAction(), 1 passed in /home/janus/www/php7-fundamental/core/Router.php on line 47 and at least 3 expected in /home/janus/www/php7-fundamental/core/Router.php:30
+Stack trace:
+#0 /home/janus/www/php7-fundamental/core/Router.php(47): callAction(Array)
+#1 /home/janus/www/php7-fundamental/core/Router.php(78): directPath('admin')
+#2 /home/janus/www/php7-fundamental/bootstrap/bootstrap.php(38): require_once('/home/janus/www...')
+#3 /home/janus/www/php7-fundamental/public/index.php(2): require_once('/home/janus/www...')
+#4 {main}
+  thrown in /home/janus/www/php7-fundamental/core/Router.php on line 30
+[17-Apr-2018 22:43:46 Europe/Kiev] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function callAction(), 1 passed in /home/janus/www/php7-fundamental/core/Router.php on line 48 and at least 3 expected in /home/janus/www/php7-fundamental/core/Router.php:30
+Stack trace:
+#0 /home/janus/www/php7-fundamental/core/Router.php(48): callAction(Array)
+#1 /home/janus/www/php7-fundamental/core/Router.php(79): directPath('admin')
+#2 /home/janus/www/php7-fundamental/bootstrap/bootstrap.php(38): require_once('/home/janus/www...')
+#3 /home/janus/www/php7-fundamental/public/index.php(2): require_once('/home/janus/www...')
+#4 {main}
+  thrown in /home/janus/www/php7-fundamental/core/Router.php on line 30
+[17-Apr-2018 22:46:29 Europe/Kiev] PHP Fatal error:  Uncaught Error: Call to undefined function makeConnection() in /home/janus/www/php7-fundamental/controllers/GuestbookController.php:36
+Stack trace:
+#0 /home/janus/www/php7-fundamental/core/Router.php(51): require()
+#1 /home/janus/www/php7-fundamental/core/Router.php(67): callAction('GuestbookContro...', 'index', '/')
+#2 /home/janus/www/php7-fundamental/core/Router.php(98): directPath('guest')
+#3 /home/janus/www/php7-fundamental/bootstrap/bootstrap.php(38): require_once('/home/janus/www...')
+#4 /home/janus/www/php7-fundamental/public/index.php(2): require_once('/home/janus/www...')
+#5 {main}
+  thrown in /home/janus/www/php7-fundamental/controllers/GuestbookController.php on line 36
+[17-Apr-2018 22:46:36 Europe/Kiev] PHP Fatal error:  Uncaught Error: Call to undefined function render() in /home/janus/www/php7-fundamental/controllers/AboutController.php:7
+Stack trace:
+#0 /home/janus/www/php7-fundamental/core/Router.php(53): AboutController->__construct()
+#1 /home/janus/www/php7-fundamental/core/Router.php(67): callAction('AboutController', 'index', '/')
+#2 /home/janus/www/php7-fundamental/core/Router.php(98): directPath('about')
+#3 /home/janus/www/php7-fundamental/bootstrap/bootstrap.php(38): require_once('/home/janus/www...')
+#4 /home/janus/www/php7-fundamental/public/index.php(2): require_once('/home/janus/www...')
+#5 {main}
+  thrown in /home/janus/www/php7-fundamental/controllers/AboutController.php on line 7
+[17-Apr-2018 22:48:32 Europe/Kiev] PHP Fatal error:  Uncaught Error: Call to undefined function render() in /home/janus/www/php7-fundamental/controllers/AboutController.php:7
+Stack trace:
+#0 /home/janus/www/php7-fundamental/core/Router.php(53): AboutController->__construct()
+#1 /home/janus/www/php7-fundamental/core/Router.php(67): callAction('AboutController', 'index', '/')
+#2 /home/janus/www/php7-fundamental/core/Router.php(98): directPath('about')
+#3 /home/janus/www/php7-fundamental/bootstrap/bootstrap.php(38): require_once('/home/janus/www...')
+#4 /home/janus/www/php7-fundamental/public/index.php(2): require_once('/home/janus/www...')
+#5 {main}
+  thrown in /home/janus/www/php7-fundamental/controllers/AboutController.php on line 7
+[17-Apr-2018 22:51:06 Europe/Kiev] PHP Notice:  Undefined property: AboutController::$_view in /home/janus/www/php7-fundamental/controllers/AboutController.php on line 9
+[17-Apr-2018 22:51:06 Europe/Kiev] PHP Fatal error:  Uncaught Error: Call to a member function render() on null in /home/janus/www/php7-fundamental/controllers/AboutController.php:9
+Stack trace:
+#0 /home/janus/www/php7-fundamental/core/Router.php(60): AboutController->index(Array)
+#1 /home/janus/www/php7-fundamental/core/Router.php(67): callAction(Object(AboutController), 'index', '/')
+#2 /home/janus/www/php7-fundamental/core/Router.php(98): directPath('about')
+#3 /home/janus/www/php7-fundamental/bootstrap/bootstrap.php(38): require_once('/home/janus/www...')
+#4 /home/janus/www/php7-fundamental/public/index.php(2): require_once('/home/janus/www...')
+#5 {main}
+  thrown in /home/janus/www/php7-fundamental/controllers/AboutController.php on line 9
+[19-Apr-2018 16:13:25 Europe/Kiev] PHP Fatal error:  Uncaught Exception: No route defined for this URI. in /home/janus/www/php7-fundamental/core/Router.php:80
+Stack trace:
+#0 /home/janus/www/php7-fundamental/core/Router.php(98): directPath('admin/products')
+#1 /home/janus/www/php7-fundamental/bootstrap/bootstrap.php(38): require_once('/home/janus/www...')
+#2 /home/janus/www/php7-fundamental/public/index.php(2): require_once('/home/janus/www...')
+#3 {main}
+  thrown in /home/janus/www/php7-fundamental/core/Router.php on line 80
+[19-Apr-2018 16:40:16 Europe/Kiev] PHP Fatal error:  Uncaught Error: Call to undefined method Post::getPostById() in /home/janus/www/php7-fundamental/controllers/Admin/blog/PostsController.php:62
+Stack trace:
+#0 /home/janus/www/php7-fundamental/core/Router.php(60): PostsController->edit(Array)
+#1 /home/janus/www/php7-fundamental/core/Router.php(76): callAction(Object(PostsController), 'edit', '/Admin/blog/', Array)
+#2 /home/janus/www/php7-fundamental/core/Router.php(98): directPath('admin/posts/edi...')
+#3 /home/janus/www/php7-fundamental/bootstrap/bootstrap.php(38): require_once('/home/janus/www...')
+#4 /home/janus/www/php7-fundamental/public/index.php(2): require_once('/home/janus/www...')
+#5 {main}
+  thrown in /home/janus/www/php7-fundamental/controllers/Admin/blog/PostsController.php on line 62
+[19-Apr-2018 16:42:49 Europe/Kiev] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function Connection::make(), 0 passed in /home/janus/www/php7-fundamental/models/Post.php on line 45 and exactly 1 expected in /home/janus/www/php7-fundamental/core/Connection.php:5
+Stack trace:
+#0 /home/janus/www/php7-fundamental/models/Post.php(45): Connection::make()
+#1 /home/janus/www/php7-fundamental/controllers/Admin/blog/PostsController.php(62): Post::getPostById('1')
+#2 /home/janus/www/php7-fundamental/core/Router.php(60): PostsController->edit(Array)
+#3 /home/janus/www/php7-fundamental/core/Router.php(76): callAction(Object(PostsController), 'edit', '/Admin/blog/', Array)
+#4 /home/janus/www/php7-fundamental/core/Router.php(98): directPath('admin/posts/edi...')
+#5 /home/janus/www/php7-fundamental/bootstrap/bootstrap.php(38): require_once('/home/janus/www...')
+#6 /home/janus/www/php7-fundamental/public/index.php(2): require_once('/home/janus/www...')
+#7 {main}
+  thrown in /home/janus/www/php7-fundamental/core/Connection.php on line 5
+[19-Apr-2018 16:47:59 Europe/Kiev] PHP Fatal error:  Uncaught Error: Call to undefined method PostsController::redirect() in /home/janus/www/php7-fundamental/controllers/Admin/blog/PostsController.php:79
+Stack trace:
+#0 /home/janus/www/php7-fundamental/core/Router.php(60): PostsController->delete(Array)
+#1 /home/janus/www/php7-fundamental/core/Router.php(76): callAction(Object(PostsController), 'delete', '/Admin/blog/', Array)
+#2 /home/janus/www/php7-fundamental/core/Router.php(98): directPath('admin/posts/del...')
+#3 /home/janus/www/php7-fundamental/bootstrap/bootstrap.php(38): require_once('/home/janus/www...')
+#4 /home/janus/www/php7-fundamental/public/index.php(2): require_once('/home/janus/www...')
+#5 {main}
+  thrown in /home/janus/www/php7-fundamental/controllers/Admin/blog/PostsController.php on line 79
+[19-Apr-2018 16:57:16 Europe/Kiev] PHP Fatal error:  Uncaught Exception: No route defined for this URI. in /home/janus/www/php7-fundamental/core/Router.php:80
+Stack trace:
+#0 /home/janus/www/php7-fundamental/core/Router.php(98): directPath('admin/posts/vie...')
+#1 /home/janus/www/php7-fundamental/bootstrap/bootstrap.php(38): require_once('/home/janus/www...')
+#2 /home/janus/www/php7-fundamental/public/index.php(2): require_once('/home/janus/www...')
+#3 {main}
+  thrown in /home/janus/www/php7-fundamental/core/Router.php on line 80
+[19-Apr-2018 16:57:50 Europe/Kiev] PHP Fatal error:  Uncaught Exception: No route defined for this URI. in /home/janus/www/php7-fundamental/core/Router.php:80
+Stack trace:
+#0 /home/janus/www/php7-fundamental/core/Router.php(98): directPath('admin/posts/vie...')
+#1 /home/janus/www/php7-fundamental/bootstrap/bootstrap.php(38): require_once('/home/janus/www...')
+#2 /home/janus/www/php7-fundamental/public/index.php(2): require_once('/home/janus/www...')
+#3 {main}
+  thrown in /home/janus/www/php7-fundamental/core/Router.php on line 80
+[20-Apr-2018 10:15:34 Europe/Kiev] PHP Fatal error:  Uncaught Exception: No route defined for this URI. in /home/janus/www/php7-fundamental/core/Router.php:80
+Stack trace:
+#0 /home/janus/www/php7-fundamental/core/Router.php(98): directPath('admin/products')
+#1 /home/janus/www/php7-fundamental/bootstrap/bootstrap.php(38): require_once('/home/janus/www...')
+#2 /home/janus/www/php7-fundamental/public/index.php(2): require_once('/home/janus/www...')
+#3 {main}
+  thrown in /home/janus/www/php7-fundamental/core/Router.php on line 80
+[20-Apr-2018 10:17:52 Europe/Kiev] PHP Warning:  include(/home/janus/www/php7-fundamental/controllers//Admin/blog//ProductsController.php): failed to open stream: No such file or directory in /home/janus/www/php7-fundamental/core/Router.php on line 51
+[20-Apr-2018 10:17:52 Europe/Kiev] PHP Warning:  include(): Failed opening '/home/janus/www/php7-fundamental/controllers//Admin/blog//ProductsController.php' for inclusion (include_path='.:/usr/share/php') in /home/janus/www/php7-fundamental/core/Router.php on line 51
+[20-Apr-2018 10:17:52 Europe/Kiev] PHP Fatal error:  Uncaught Error: Class 'ProductsController' not found in /home/janus/www/php7-fundamental/core/Router.php:53
+Stack trace:
+#0 /home/janus/www/php7-fundamental/core/Router.php(67): callAction('ProductsControl...', 'index', '/Admin/blog/')
+#1 /home/janus/www/php7-fundamental/core/Router.php(98): directPath('admin/products')
+#2 /home/janus/www/php7-fundamental/bootstrap/bootstrap.php(38): require_once('/home/janus/www...')
+#3 /home/janus/www/php7-fundamental/public/index.php(2): require_once('/home/janus/www...')
+#4 {main}
+  thrown in /home/janus/www/php7-fundamental/core/Router.php on line 53
+[20-Apr-2018 10:18:39 Europe/Kiev] PHP Fatal error:  Uncaught Error: Class 'Product' not found in /home/janus/www/php7-fundamental/controllers/Admin/shop/ProductsController.php:16
+Stack trace:
+#0 /home/janus/www/php7-fundamental/core/Router.php(60): ProductsController->index(Array)
+#1 /home/janus/www/php7-fundamental/core/Router.php(67): callAction(Object(ProductsController), 'index', '/Admin/shop/')
+#2 /home/janus/www/php7-fundamental/core/Router.php(98): directPath('admin/products')
+#3 /home/janus/www/php7-fundamental/bootstrap/bootstrap.php(38): require_once('/home/janus/www...')
+#4 /home/janus/www/php7-fundamental/public/index.php(2): require_once('/home/janus/www...')
+#5 {main}
+  thrown in /home/janus/www/php7-fundamental/controllers/Admin/shop/ProductsController.php on line 16
+[20-Apr-2018 10:19:30 Europe/Kiev] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function Connection::make(), 0 passed in /home/janus/www/php7-fundamental/models/Product.php on line 20 and exactly 1 expected in /home/janus/www/php7-fundamental/core/Connection.php:5
+Stack trace:
+#0 /home/janus/www/php7-fundamental/models/Product.php(20): Connection::make()
+#1 /home/janus/www/php7-fundamental/controllers/Admin/shop/ProductsController.php(16): Product::index()
+#2 /home/janus/www/php7-fundamental/core/Router.php(60): ProductsController->index(Array)
+#3 /home/janus/www/php7-fundamental/core/Router.php(67): callAction(Object(ProductsController), 'index', '/Admin/shop/')
+#4 /home/janus/www/php7-fundamental/core/Router.php(98): directPath('admin/products')
+#5 /home/janus/www/php7-fundamental/bootstrap/bootstrap.php(41): require_once('/home/janus/www...')
+#6 /home/janus/www/php7-fundamental/public/index.php(2): require_once('/home/janus/www...')
+#7 {main}
+  thrown in /home/janus/www/php7-fundamental/core/Connection.php on line 5
+[20-Apr-2018 10:20:57 Europe/Kiev] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'shopping.products' doesn't exist in /home/janus/www/php7-fundamental/models/Product.php:24
+Stack trace:
+#0 /home/janus/www/php7-fundamental/models/Product.php(24): PDO->query('SELECT id, name...')
+#1 /home/janus/www/php7-fundamental/controllers/Admin/shop/ProductsController.php(16): Product::index()
+#2 /home/janus/www/php7-fundamental/core/Router.php(60): ProductsController->index(Array)
+#3 /home/janus/www/php7-fundamental/core/Router.php(67): callAction(Object(ProductsController), 'index', '/Admin/shop/')
+#4 /home/janus/www/php7-fundamental/core/Router.php(98): directPath('admin/products')
+#5 /home/janus/www/php7-fundamental/bootstrap/bootstrap.php(41): require_once('/home/janus/www...')
+#6 /home/janus/www/php7-fundamental/public/index.php(2): require_once('/home/janus/www...')
+#7 {main}
+  thrown in /home/janus/www/php7-fundamental/models/Product.php on line 24
+[20-Apr-2018 10:23:25 Europe/Kiev] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function Connection::make(), 0 passed in /home/janus/www/php7-fundamental/models/Category.php on line 10 and exactly 1 expected in /home/janus/www/php7-fundamental/core/Connection.php:5
+Stack trace:
+#0 /home/janus/www/php7-fundamental/models/Category.php(10): Connection::make()
+#1 /home/janus/www/php7-fundamental/controllers/Admin/shop/ProductsController.php(120): Category::index()
+#2 /home/janus/www/php7-fundamental/core/Router.php(60): ProductsController->create(Array)
+#3 /home/janus/www/php7-fundamental/core/Router.php(67): callAction(Object(ProductsController), 'create', '/Admin/shop/')
+#4 /home/janus/www/php7-fundamental/core/Router.php(98): directPath('admin/products/...')
+#5 /home/janus/www/php7-fundamental/bootstrap/bootstrap.php(41): require_once('/home/janus/www...')
+#6 /home/janus/www/php7-fundamental/public/index.php(2): require_once('/home/janus/www...')
+#7 {main}
+  thrown in /home/janus/www/php7-fundamental/core/Connection.php on line 5
+[20-Apr-2018 10:24:21 Europe/Kiev] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function Connection::make(), 0 passed in /home/janus/www/php7-fundamental/models/Category.php on line 10 and exactly 1 expected in /home/janus/www/php7-fundamental/core/Connection.php:5
+Stack trace:
+#0 /home/janus/www/php7-fundamental/models/Category.php(10): Connection::make()
+#1 /home/janus/www/php7-fundamental/controllers/Admin/shop/ProductsController.php(120): Category::index()
+#2 /home/janus/www/php7-fundamental/core/Router.php(60): ProductsController->create(Array)
+#3 /home/janus/www/php7-fundamental/core/Router.php(67): callAction(Object(ProductsController), 'create', '/Admin/shop/')
+#4 /home/janus/www/php7-fundamental/core/Router.php(98): directPath('admin/products/...')
+#5 /home/janus/www/php7-fundamental/bootstrap/bootstrap.php(41): require_once('/home/janus/www...')
+#6 /home/janus/www/php7-fundamental/public/index.php(2): require_once('/home/janus/www...')
+#7 {main}
+  thrown in /home/janus/www/php7-fundamental/core/Connection.php on line 5
+[20-Apr-2018 10:31:06 Europe/Kiev] PHP Fatal error:  Uncaught Error: Class 'Meta' not found in /home/janus/www/php7-fundamental/controllers/Admin/shop/ProductsController.php:164
+Stack trace:
+#0 /home/janus/www/php7-fundamental/core/Router.php(60): ProductsController->edit(Array)
+#1 /home/janus/www/php7-fundamental/core/Router.php(76): callAction(Object(ProductsController), 'edit', '/Admin/shop/', Array)
+#2 /home/janus/www/php7-fundamental/core/Router.php(98): directPath('admin/products/...')
+#3 /home/janus/www/php7-fundamental/bootstrap/bootstrap.php(41): require_once('/home/janus/www...')
+#4 /home/janus/www/php7-fundamental/public/index.php(2): require_once('/home/janus/www...')
+#5 {main}
+  thrown in /home/janus/www/php7-fundamental/controllers/Admin/shop/ProductsController.php on line 164
+[20-Apr-2018 10:48:58 Europe/Kiev] PHP Warning:  require(/home/janus/www/php7-fundamental/views//admin/products/show.php): failed to open stream: No such file or directory in /home/janus/www/php7-fundamental/core/View.php on line 8
+[20-Apr-2018 10:48:58 Europe/Kiev] PHP Fatal error:  require(): Failed opening required '/home/janus/www/php7-fundamental/views//admin/products/show.php' (include_path='.:/usr/share/php') in /home/janus/www/php7-fundamental/core/View.php on line 8

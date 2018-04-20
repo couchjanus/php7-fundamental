@@ -19,6 +19,7 @@ catch(PDOException $e) {
     echo "SQL, у нас проблемы.\n" . $e->getMessage();
     file_put_contents('PDOErrors.log', $e->getMessage(), FILE_APPEND);
 }
+
 finally {
     $DBH = null;
 }

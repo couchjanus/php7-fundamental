@@ -27,7 +27,7 @@
 	           </div>
 	           <div class="col-md-5">
 	              <div class="row">
-	                <div class="col-lg-12">
+	                <div class="col-md-12">
 	                  <div class="input-group form">
 	                       <input type="text" class="form-control" placeholder="Search...">
 	                       <span class="input-group-btn">
@@ -43,7 +43,7 @@
 	                    <ul class="nav navbar-nav">
 	                      <li class="dropdown">
                           <a href="#" data-rel="reload"><i class="dropdown-toggle glyphicon glyphicon-cog"></i></a>
-	                        
+
 	                        <ul class="dropdown-menu animated fadeInUp">
 	                          <li><a href="profile.html">Profile</a></li>
 	                          <li><a href="login.html">Logout</a></li>

@@ -2,6 +2,21 @@
 
  class Connection
  {
+     public static function make($configs)
+     {
+         try{
+             return new PDO(
+                 $configs['connection'].
+                 ';dbname='.$configs['name'],
+                 $configs['username'],
+                 $configs['password'],
+                 $configs['options']
+             );
+         }catch(PDOException $e){
+           file_put_contents(LOGS.'PDOErrors.log', $e->getMessage(), FILE_APPEND);
+           die($e->getMessage());
+         }
+     }
 
   public static function makeConnection()
   {

@@ -1,14 +1,12 @@
 <?php
 
-class AboutController
+class AboutController extends Controller
 {
-    public function __construct()
-    {
-      render('home/about', ['title'=>'About <b>Our Cats</b>']);
-    }
-
     public function index()
     {
+      $data['title'] = 'About <b>Our Cats</b>';
+      $data['subtitle'] = 'Lorem Ipsum не є випадковим набором літер';
+      $this->_view->render('home/about', $data);
 
     }
 

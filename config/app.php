@@ -4,6 +4,7 @@
     define('VIEWS', ROOT.'/views/');
     define('CONTROLLERS', ROOT.'/controllers/');
     define('CONFIG', ROOT.'/config/');
+    define('MODELS', ROOT.'/models/');
     define('CORE', ROOT.'/core/');
 
     define('LOGS', ROOT.'/logs/');
