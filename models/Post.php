@@ -22,28 +22,11 @@ class Post
             $status = $parameters['status'];
             $statment->execute();
 
-            // public function insert($table, $parameters){
-            // $sql = sprintf(
-            //         'insert into %s (%s) values (%s)',
-            //         'posts',
-            //         implode(', ', array_keys($parameters)),
-            //         ':' . implode(', :', array_keys($parameters))
-            //     );
-
-            //     try{
-            //         $statment = $pdo->prepare($sql);
-
-            //         $statment->execute($parameters);
-            //     }catch(Execption $e){
-            //         die('Whooops, something went wrong');
-            //     }
-
     }
 
     public static function getPostById($id) 
     {
         $con = Connection::makeConnection();
-        // $con->exec("set names utf8");
         $sql = "SELECT * FROM posts WHERE id = :id";
         $res = $con->prepare($sql);
         $res->bindParam(':id', $id, PDO::PARAM_INT);
