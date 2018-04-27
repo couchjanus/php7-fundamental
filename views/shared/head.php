@@ -7,7 +7,7 @@
           <title>Hello cart</title>
           <script defer src="/fontawesome/js/fontawesome-all.js"></script>
           <link rel="stylesheet" href="/css/main.css">
-      
+          <link rel="stylesheet" href="/css/blog.css">
           <style>
                
           </style>

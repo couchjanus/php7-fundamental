@@ -11,4 +11,10 @@ class HomeController extends Controller
         $this->_view->render('home/index', $data);
     }
 
+    public function getProduct($vars)
+    {
+        $products = Product::getProducts();
+        echo json_encode($products);
+    }
+
 }

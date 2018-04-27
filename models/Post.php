@@ -13,37 +13,26 @@ class Post
     public static function store($parameters)
     {
             $pdo = Connection::makeConnection();
-            $statment = $pdo->prepare("INSERT INTO posts (title, content, status) VALUES (?, ?, ?)");
+            $statment = $pdo->prepare("INSERT INTO posts (title, slug, content, status) VALUES (?, ?, ?, ?)");
+            
             $statment->bindParam(1, $title);
-            $statment->bindParam(2, $content);
-            $statment->bindParam(3, $status);
+            $statment->bindParam(2, $slug);
+            $statment->bindParam(3, $content);
+            $statment->bindParam(4, $status);
+            
             $title = $parameters['title'];
+            
+            $slug = Slug::makeSlug($parameters['title'], array('transliterate' => true));
+
             $content = $parameters['content'];
             $status = $parameters['status'];
+            
             $statment->execute();
-
-            // public function insert($table, $parameters){
-            // $sql = sprintf(
-            //         'insert into %s (%s) values (%s)',
-            //         'posts',
-            //         implode(', ', array_keys($parameters)),
-            //         ':' . implode(', :', array_keys($parameters))
-            //     );
-
-            //     try{
-            //         $statment = $pdo->prepare($sql);
-
-            //         $statment->execute($parameters);
-            //     }catch(Execption $e){
-            //         die('Whooops, something went wrong');
-            //     }
-
     }
 
     public static function getPostById($id) 
     {
         $con = Connection::makeConnection();
-        // $con->exec("set names utf8");
         $sql = "SELECT * FROM posts WHERE id = :id";
         $res = $con->prepare($sql);
         $res->bindParam(':id', $id, PDO::PARAM_INT);
@@ -51,6 +40,19 @@ class Post
         $post = $res->fetch(PDO::FETCH_ASSOC);
         return $post;
     }
+
+
+    public static function getPostBySlug($slug) 
+    {
+        $con = Connection::makeConnection();
+        $sql = "SELECT * FROM posts WHERE slug = :slug";
+        $res = $con->prepare($sql);
+        $res->bindParam(':slug', $slug, PDO::PARAM_STR);
+        $res->execute();
+        $post = $res->fetch(PDO::FETCH_ASSOC);
+        return $post;
+    }
+
 
     public static function destroy($id) 
     {

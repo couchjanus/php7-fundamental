@@ -16,4 +16,14 @@ class BlogController extends Controller
         $data['posts'] = $posts;
         $this->_view->render('blog/index', $data);
     }
+
+    public function show($vars)
+    {
+        extract($vars);
+
+        $data['title'] = 'Cats Blog ';
+        $data['post'] = Post::getPostBySlug($slug);
+        $this->_view->render('blog/show', $data);
+
+    }
 }

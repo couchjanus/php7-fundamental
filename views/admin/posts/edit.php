@@ -18,7 +18,7 @@ require_once VIEWS.'shared/admin/header.php';
           </div>
         </div>
 
-        <form class="form-horizontal" role="form" method="POST"  id="idForm">
+        <form class="form-horizontal" role="form" method="POST"  action="/admin/posts/update/<?= $post['id']?>">
           <div class="panel-body">
             <div class="form-group">
               <label for="title" class="col-sm-2 control-label">Post Title</label>

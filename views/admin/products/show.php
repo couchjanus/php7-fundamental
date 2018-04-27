@@ -24,6 +24,7 @@
             <div class="panel-body">
                 <h2><?= $product['name']?></h2>
                 <div><?= $product['description']?></div>
+                <img src="/media/<?=$picture['filename']?>">
             </div>
             <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10">
