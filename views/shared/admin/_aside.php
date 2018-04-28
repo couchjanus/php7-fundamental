@@ -9,5 +9,11 @@
                   <li>
                     <a data-title='Управление posts' href="/admin/posts"><i class="glyphicon glyphicon-list"></i> Posts</a>
                   </li>
+                  <li>
+                    <a data-title='Управление roles' href="/admin/roles"><i class="glyphicon glyphicon-list"></i> Roles</a>
+                  </li>
+                  <li>
+                    <a data-title='Управление users' href="/admin/users"><i class="glyphicon glyphicon-list"></i> Users</a>
+                  </li>
                 </ul>
              </div>

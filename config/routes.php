@@ -47,3 +47,43 @@ $router->post('admin/posts/update/{id}', 'Admin\blog\PostsController@update');
 $router->post('admin/posts/delete/{id}', 'Admin\blog\PostsController@delete');
 
 $router->get('api/shop', 'HomeController@getProduct');
+
+
+$router->get('admin/roles', 'Admin\acl\RolesController@index');
+$router->get('admin/roles/create', 'Admin\acl\RolesController@create');
+$router->get('admin/roles/edit/{id}', 'Admin\acl\RolesController@edit');
+$router->get('admin/roles/delete/{id}', 'Admin\acl\RolesController@delete');
+
+$router->post('admin/roles/create', 'Admin\acl\RolesController@create');
+$router->post('admin/roles/edit/{id}', 'Admin\acl\RolesController@edit');
+$router->post('admin/roles/delete/{id}', 'Admin\acl\RolesController@delete');
+
+
+$router->get('admin/permissions', 'Admin\acl\PermissionsController@index');
+$router->get('admin/permissions/create', 'Admin\acl\PermissionsController@create');
+$router->get('admin/permissions/edit/{id}', 'Admin\acl\PermissionsController@edit');
+$router->get('admin/permissions/delete/{id}', 'Admin\acl\PermissionsController@delete');
+
+$router->post('admin/permissions/create', 'Admin\acl\PermissionsController@create');
+$router->post('admin/permissions/edit/{id}', 'Admin\acl\PermissionsController@edit');
+$router->post('admin/permissions/delete/{id}', 'Admin\acl\PermissionsController@delete');
+
+
+$router->get('admin/users', 'Admin\users\UsersController@index');
+$router->get('admin/users/create', 'Admin\users\UsersController@create');
+$router->post('admin/users/create', 'Admin\users\UsersController@create');
+
+$router->get('admin/users/edit/{id}', 'Admin\users\UsersController@edit');
+$router->post('admin/users/edit/{id}', 'Admin\users\UsersController@edit');
+
+$router->get('admin/users/delete/{id}', 'Admin\users\UsersController@delete');
+$router->post('admin/users/delete/{id}', 'Admin\users\UsersController@delete');
+
+$router->get('register', 'UsersController@signup');
+$router->post('register', 'UsersController@signup');
+
+$router->get('login', 'UsersController@login');
+$router->post('login', 'UsersController@login');
+
+$router->get('logout', 'UsersController@logout');
+$router->post('logout', 'UsersController@logout');

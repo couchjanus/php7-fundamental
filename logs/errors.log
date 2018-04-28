@@ -419,3 +419,24 @@ Stack trace:
 [26-Apr-2018 11:01:52 Europe/Kiev] PHP Notice:  Undefined index: slug in /home/janus/www/php7-fundamental/views/blog/index.php on line 17
 [26-Apr-2018 11:01:52 Europe/Kiev] PHP Notice:  Undefined index: slug in /home/janus/www/php7-fundamental/views/blog/index.php on line 17
 [27-Apr-2018 17:20:50 Europe/Kiev] PHP Recoverable fatal error:  Object of class ProductsController could not be converted to string in /home/janus/www/php7-fundamental/core/Router.php on line 82
+[28-Apr-2018 20:30:28 Europe/Kiev] PHP Fatal error:  Uncaught Error: Class 'User' not found in /home/janus/www/php7-fundamental/controllers/Admin/users/UsersController.php:8
+Stack trace:
+#0 /home/janus/www/php7-fundamental/core/Router.php(84): UsersController->index(Array)
+#1 /home/janus/www/php7-fundamental/core/Router.php(34): Router->callAction(Object(UsersController), 'index', '/Admin/users/')
+#2 /home/janus/www/php7-fundamental/bootstrap/bootstrap.php(35): Router->directPath('admin/users', 'GET')
+#3 /home/janus/www/php7-fundamental/public/index.php(2): require_once('/home/janus/www...')
+#4 {main}
+  thrown in /home/janus/www/php7-fundamental/controllers/Admin/users/UsersController.php on line 8
+[28-Apr-2018 20:31:21 Europe/Kiev] PHP Fatal error:  Cannot redeclare User::getUserById() in /home/janus/www/php7-fundamental/models/User.php on line 268
+[28-Apr-2018 21:15:50 Europe/Kiev] PHP Warning:  require(/home/janus/www/php7-fundamental/views//admin/roles/add.php): failed to open stream: No such file or directory in /home/janus/www/php7-fundamental/core/View.php on line 8
+[28-Apr-2018 21:15:50 Europe/Kiev] PHP Fatal error:  require(): Failed opening required '/home/janus/www/php7-fundamental/views//admin/roles/add.php' (include_path='.:/usr/share/php') in /home/janus/www/php7-fundamental/core/View.php on line 8
+[28-Apr-2018 21:24:06 Europe/Kiev] PHP Warning:  Use of undefined constant SESSION_PREFIX - assumed 'SESSION_PREFIX' (this will throw an Error in a future version of PHP) in /home/janus/www/php7-fundamental/core/Session.php on line 30
+[28-Apr-2018 21:30:09 Europe/Kiev] PHP Warning:  Use of undefined constant SESSION_PREFIX - assumed 'SESSION_PREFIX' (this will throw an Error in a future version of PHP) in /home/janus/www/php7-fundamental/core/Session.php on line 30
+[28-Apr-2018 21:30:55 Europe/Kiev] PHP Warning:  Use of undefined constant SESSION_PREFIX - assumed 'SESSION_PREFIX' (this will throw an Error in a future version of PHP) in /home/janus/www/php7-fundamental/core/Session.php on line 30
+[28-Apr-2018 21:31:11 Europe/Kiev] PHP Warning:  Use of undefined constant SESSION_PREFIX - assumed 'SESSION_PREFIX' (this will throw an Error in a future version of PHP) in /home/janus/www/php7-fundamental/core/Session.php on line 30
+[28-Apr-2018 21:39:38 Europe/Kiev] PHP Warning:  Use of undefined constant SESSION_PREFIX - assumed 'SESSION_PREFIX' (this will throw an Error in a future version of PHP) in /home/janus/www/php7-fundamental/core/Session.php on line 30
+[28-Apr-2018 21:39:44 Europe/Kiev] PHP Warning:  Use of undefined constant SESSION_PREFIX - assumed 'SESSION_PREFIX' (this will throw an Error in a future version of PHP) in /home/janus/www/php7-fundamental/core/Session.php on line 30
+[28-Apr-2018 21:39:49 Europe/Kiev] PHP Warning:  Use of undefined constant SESSION_PREFIX - assumed 'SESSION_PREFIX' (this will throw an Error in a future version of PHP) in /home/janus/www/php7-fundamental/core/Session.php on line 30
+[28-Apr-2018 21:39:49 Europe/Kiev] PHP Warning:  Use of undefined constant SESSION_PREFIX - assumed 'SESSION_PREFIX' (this will throw an Error in a future version of PHP) in /home/janus/www/php7-fundamental/core/Session.php on line 30
+[28-Apr-2018 22:11:16 Europe/Kiev] PHP Notice:  Undefined index: permissions in /home/janus/www/php7-fundamental/views/admin/roles/edit.php on line 14
+[28-Apr-2018 22:11:16 Europe/Kiev] PHP Warning:  Invalid argument supplied for foreach() in /home/janus/www/php7-fundamental/views/admin/roles/edit.php on line 14
