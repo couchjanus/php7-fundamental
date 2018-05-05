@@ -15,5 +15,8 @@
                   <li>
                     <a data-title='Управление users' href="/admin/users"><i class="glyphicon glyphicon-list"></i> Users</a>
                   </li>
+                  <li>
+                    <a data-title='Управление orders' href="/admin/orders"><i class="glyphicon glyphicon-list"></i> Orders</a>
+                  </li>
                 </ul>
              </div>

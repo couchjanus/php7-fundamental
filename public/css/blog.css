@@ -313,3 +313,19 @@ dropdown {
     box-sizing: border-box;
     width: 100%;
   }
+
+  .grid-container {
+    display: grid;
+    margin-top: 7em;
+    grid-template-rows: 10em 1fr;
+    grid-template-columns: 3fr 9fr;
+    grid-gap: 1rem;
+  }
+  .row {
+    grid-column: span 2;
+    text-align: center;
+  }
+
+  .column{
+    padding: 2rem;
+  }

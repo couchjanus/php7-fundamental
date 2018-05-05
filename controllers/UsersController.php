@@ -6,6 +6,8 @@
 
 class UsersController extends Controller
 {
+    protected $userId;
+    protected $user;
 
     /**
      * Class UserController для работы с пользователем
@@ -14,8 +16,6 @@ class UsersController extends Controller
     {
         parent::__construct();
     }
-
-    protected $user;
 
     /**
      * Регистрация пользователя
@@ -70,6 +70,7 @@ class UsersController extends Controller
 
     }
 
+
     public function actionCheck()
     {
         if (!Session::get('logged') == true) {
@@ -78,9 +79,14 @@ class UsersController extends Controller
                     'url' => 'login'
                 );
         } else {
+   
+            $this->userId = User::checkLog();
+            $this->user = User::getUserById($this->userId);
+
             $response = array(
-                'r' => 'success',
-                'msg' => 'Logged in'
+                'phone_number' => $this->user['phone_number'],
+                'last_name' => $this->user['last_name'],
+                'first_name' => $this->user['first_name']
             );
         }
 
@@ -122,7 +128,7 @@ class UsersController extends Controller
             if ($userId == false) {
                 $data['errors'][] = "Пользователя с таким email или паролем не существует";
             } else {
-                $this->user = User::get($userId);
+                $this->user = User::getUserById($userId);
 
                 User::auth($userId); //записываем пользователя в сессию
 

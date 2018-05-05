@@ -27,6 +27,8 @@ require_once MODELS.'Product.php';
 require_once MODELS.'Picture.php';
 require_once MODELS.'Role.php';
 require_once MODELS.'User.php';
+require_once MODELS.'Order.php';
+require_once MODELS.'Permission.php';
 require_once CORE.'Connection.php';
 
 require_once CORE.'Request.php';

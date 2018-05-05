@@ -13,7 +13,6 @@ require_once VIEWS.'shared/admin/header.php';
         <div class="content-box-large">
                 <div class="panel-heading">
                     <div class="panel-title"><h3><?= $title;?></h3></div>
-                    <a href="/admin/roles/create"><button class="btn btn-primary pull-right"><i class="glyphicon glyphicon-plus-sign"></i> Add New</button></a>
                 </div>
 
                 <div class="panel-body">
@@ -22,28 +21,29 @@ require_once VIEWS.'shared/admin/header.php';
                           <thead>
                             <tr>
                               <th>#</th>
-                              <th>Role Name</th>
+                              <th>User Name</th>
+                              <th>Order Status</th>
                               <th>Action</th>
                             </tr>
                           </thead>
 
+
                           <tbody class="table-items">
-                          <?php foreach ($roles as $role):?>
+                          <?php foreach ($orders as $order):?>
                             <tr>
-                              <td><?php echo $role['id']?></td>
-                              <td><?php echo $role['name']?></td>
+                              <td><?php echo $order['id']?></td>
+                              <td><?php echo $order['user_id']?></td>
+                              <td><?php echo Order::getStatusText($order['status']);?></td>
                               <td>
-                              <button class="btn btn-default"><i class="glyphicon glyphicon-eye-open"></i> View</button>
-                              <a href="/admin/roles/edit/<?= $role['id']?>">
-                                <button class="btn btn-primary"><i class="glyphicon glyphicon-pencil"></i> Edit</button>
-                              </a>
-                              
-                              <a href="/admin/roles/delete/<?= $role['id']?>">
-                                <button class="btn btn-danger"><i class="glyphicon glyphicon-remove"></i> Delete</button>
-                              </a>
-                              </td>
+                              <a title="Редактировать" href="/admin/orders/view/<?= $order['id']?>">
+                              <button class="btn btn-default"><i class="glyphicon glyphicon-eye-open"></i> View</button></a>
+                              <a title="Редактировать" href="/admin/orders/edit/<?= $order['id']?>">
+                              <button class="btn btn-primary"><i class="glyphicon glyphicon-pencil"></i> Edit</button></a>
+                              <a title="Редактировать" href="/admin/orders/delete/<?= $order['id']?>">
+                              <button class="btn btn-danger"><i class="glyphicon glyphicon-remove"></i> Delete</button></a></td>
                             </tr>
                             <?php endforeach;?>
+
                           </tbody>
                         </table>
                     </div>

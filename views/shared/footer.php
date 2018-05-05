@@ -135,3 +135,53 @@
         </footer>
     </div>
 
+<script id="order-form" type="text/template">
+  <div id="wrap">
+
+    <div class="step">
+      <div class="number">
+        <span>1</span>
+      </div>
+      <div class="title">
+        <h1>Order Information</h1>
+      </div>
+    </div>
+    
+    <div class="content order" id="address">
+      
+      <form class="go-right" id="payorder">
+        <div class="form-group">
+          <label for="first_name">User First Name</label>
+          <input class="form-controll" required type="text" name="first_name" placeholder="Your First Name" id="first_name" data-trigger="change">
+        </div>
+        <div class="form-group">
+          <label for="last_name">User Last Name</label>
+          <input class="form-controll" required type="text" name="last_name" placeholder="Your Last Name" id="last_name" data-trigger="change">
+        </div>
+        <div class="form-group">
+          <label for="phone_number">User Phone Number</label>
+          <input class="form-controll" required type="text" name="phone_number" placeholder="Your Phone Number" id="phone_number" data-trigger="change">
+        </div>
+                
+        <div class="form-group">
+          <span class="sub">By selecting this button you agree to the purchase and subsequent payment for this order.</span>
+          <div id="ordered">
+            <div class="totals">
+              <span class="subtitle">Subtotal <span id="sub_price">$45.00</span></span>
+              <span class="subtitle">Tax <span id="sub_tax">$2.00</span></span>
+              <span class="subtitle">Shipping <span id="sub_ship">$4.00</span></span>
+            </div>
+            <div class="final">
+              <span class="title">Total <span id="calculated_total">$51.00</span></span>
+            </div>
+            <br>
+          </div>
+          <input type=button name="submit" class="checkout-button" id="complete" value="Complete Order" class="btn btn-primary">
+        </div>
+      
+      </form>
+        
+        </div>
+    </div>
+  </div>
+</script>

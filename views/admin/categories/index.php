@@ -1,13 +1,12 @@
 <?php
-include_once VIEWS.'shared/admin/header.php';
+require_once VIEWS.'shared/admin/header.php';
 ?>
     <div class="page-content">
       <div class="row">
       <div class="col-md-3">
         <?php
-          include_once VIEWS.'shared/admin/_aside.php';
+          require_once VIEWS.'shared/admin/_aside.php';
         ?>
-
       </div>
       <div class="col-md-9">
         <div class="content-box-large">
@@ -48,4 +47,4 @@ include_once VIEWS.'shared/admin/header.php';
         </div>
       </div>
 <?php
-include_once VIEWS.'shared/admin/footer.php';
+require_once VIEWS.'shared/admin/footer.php';

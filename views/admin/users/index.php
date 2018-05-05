@@ -54,5 +54,8 @@ require_once VIEWS.'shared/admin/header.php';
                     </div>
                 </div>
             </div>
+            </div>
+        </div>
+      </div>
 <?php
 require_once VIEWS.'shared/admin/footer.php';

@@ -79,6 +79,18 @@ $router->post('admin/users/edit/{id}', 'Admin\users\UsersController@edit');
 $router->get('admin/users/delete/{id}', 'Admin\users\UsersController@delete');
 $router->post('admin/users/delete/{id}', 'Admin\users\UsersController@delete');
 
+
+$router->get('admin/orders', 'Admin\shop\OrdersController@index');
+$router->get('admin/orders/view/{id}', 'Admin\shop\OrdersController@view');
+$router->get('admin/orders/edit/{id}', 'Admin\shop\OrdersController@edit');
+
+$router->get('admin/orders/delete/{id}', 'Admin\shop\OrdersController@delete');
+$router->post('admin/orders/edit/{id}', 'Admin\shop\OrdersController@edit');
+$router->post('admin/orders/delete/{id}', 'Admin\shop\OrdersController@delete');
+
+$router->post('check', 'UsersController@actionCheck');
+$router->post('cart', 'CartController@index');
+
 $router->get('register', 'UsersController@signup');
 $router->post('register', 'UsersController@signup');
 
@@ -87,3 +99,13 @@ $router->post('login', 'UsersController@login');
 
 $router->get('logout', 'UsersController@logout');
 $router->post('logout', 'UsersController@logout');
+
+$router->get('profile', 'ProfileController@index');
+$router->get('profile/edit', 'ProfileController@edit');
+$router->get('profile/orders', 'ProfileController@ordersList');
+
+$router->get('profile/orders/view/{id}', 'ProfileController@ordersView');
+$router->get('profile/orders/edit/{id}', 'ProfileController@ordersEdit');
+$router->get('profile/orders/delete/{id}', 'ProfileController@ordersDelete');
+
+$router->post('profile/edit', 'ProfileController@edit');

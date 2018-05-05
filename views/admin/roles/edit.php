@@ -26,6 +26,12 @@ require_once VIEWS.'shared/admin/header.php';
                 <input type="text" class="form-control" id="title" name="name" value="<?= $role['name']?>">
               </div>
             </div>
+
+            <div class="form-group">
+                <?php foreach ($permissions as $permission):?>
+                    <input type="checkbox" class="form-control" name="check_list[]" value="<?=$permission['id']?>" <?=in_array($permission['id'], $perms)?'checked':'';?>><label class="col-sm-2 control-label" ><?=$permission['name']?></label>
+                <?php endforeach;?>
+            </div>
            
             <hr>
             <div class="form-group">

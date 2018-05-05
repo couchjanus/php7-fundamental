@@ -202,6 +202,20 @@ class User
         return false;
     }
 
+    public static function checkPhoneNumber($id)
+    {
+        $db = Connection::makeConnection();
+        $sql = "SELECT phone_number FROM users
+                    WHERE id = :id";
+        $res = $db->prepare($sql);
+        $res->bindParam(':id', $id, PDO::PARAM_INT);
+        $res->execute();
+
+        if ($res->fetchColumn())
+            return $res->fetchColumn();
+        return false;
+    }
+
     /**
      * Проверка на существовние введенных данных при ааторизации
      *
@@ -289,4 +303,21 @@ class User
         $res->bindParam(':id', $userId);
         $res->execute();
     }
+
+
+    public static function updateProfile($userId, $options)
+    {
+        $db = Connection::makeConnection();
+        $sql = "UPDATE users
+                    SET phone_number = :phone_number, first_name = :first_name, last_name = :last_name
+                    WHERE id = :id";
+        $res = $db->prepare($sql);
+        // $res->bindParam(':name', $options['name'], PDO::PARAM_STR);
+        $res->bindParam(':phone_number', $options['phone_number'], PDO::PARAM_STR);
+        $res->bindParam(':first_name', $options['first_name'], PDO::PARAM_STR);
+        $res->bindParam(':last_name', $options['last_name'], PDO::PARAM_STR);
+        $res->bindParam(':id', $userId, PDO::PARAM_INT);
+        return $res->execute();
+    }
+    
 }

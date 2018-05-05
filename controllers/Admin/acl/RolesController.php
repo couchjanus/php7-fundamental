@@ -42,15 +42,28 @@ class RolesController extends Controller
     public function edit($vars)
     {
         extract($vars);
-        $role = Role::getRoleById($id);
 
+        list($role, $perms) = Role::getRolePermission($id);
+        
+        $permissions = Permission::index();
+    
         if (isset($_POST) and !empty($_POST)) {
             $options['name'] = trim(strip_tags($_POST['name']));
+         
             Role::update($id, $options);
+                
+            if (!empty($_POST['check_list'])) {
+                foreach ($_POST['check_list'] as $selected) {
+                    Role::insertPerm($id, $selected);
+                }
+            }
             header('Location: /admin/roles');
         }
-        $data['title'] = 'Admin Role Edit ';
+        
+        $data['title'] = 'Admin Category Edit Page ';
         $data['role'] = $role;
+        $data['perms'] = $perms;
+        $data['permissions'] = $permissions;
         $this->_view->render('admin/roles/edit', $data);
 
     }

@@ -252,6 +252,50 @@
             updateTotal();
         });
 
+
+        $('.checkout__trigger').on('click',function(){
+            $.ajax({
+                type: 'POST',
+                dataType: 'json',
+                url: 'check',
+                success: function(d) {
+                    if (d.r == "fail") {
+                        window.location.href = d.url;
+                    } else {
+                        // console.log(d.msg);
+                        toggle_panel($('#cart-sidebar'), $('#shadow-layer'));
+                        $('.main-container').empty();
+                        
+                        let $template = $($('#order-form').html());
+                        $template.find("#first_name").val(d.first_name);
+                        $template.find("#last_name").val(d.last_name);
+                        $template.find("#phone_number").val(d.phone_number);
+                        $(".main-container").append($template);
+
+                        $('#complete').on('click',function(){
+                            $.ajax({
+                                type: 'POST',
+                                url: 'cart',
+                                dataType: 'json',
+                                data: { 'val': JSON.stringify(shoppingCart),
+                                        'user_props': $("form#payorder").serialize() }
+                            })
+                            .then( function(data){
+                                // console.log('succsess');
+                                console.log(data);
+                                localStorage.removeItem('shoppingCart');
+                                $(".cart-items").empty();
+                                shoppingCart = [];
+                                updateTotal();
+                                $(location).attr('href', 'profile')
+                            });
+                    
+                        });
+                    }
+                }
+            });
+        });
+
         let plus = document.getElementsByClassName('plus');
         plus = Array.prototype.slice.call(plus); // теперь plus - массив
         plus.forEach(function(elem) {
@@ -270,8 +314,9 @@
                 });
         });
 
-        });
+    });
 
-  });
+});
+
 </script>
   
