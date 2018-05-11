@@ -768,3 +768,70 @@ Stack trace:
 [05-May-2018 18:11:57 Europe/Kiev] PHP Warning:  Illegal string offset 'phone_number' in /home/janus/www/php7-fundamental/controllers/CartController.php on line 24
 [05-May-2018 18:15:38 Europe/Kiev] PHP Notice:  unserialize(): Error at offset 0 of 51 bytes in /home/janus/www/php7-fundamental/controllers/CartController.php on line 24
 [05-May-2018 18:23:54 Europe/Kiev] PHP Notice:  Undefined variable: params in /home/janus/www/php7-fundamental/controllers/CartController.php on line 31
+[11-May-2018 10:09:53 Europe/Kiev] PHP Warning:  Use of undefined constant DOMAIN - assumed 'DOMAIN' (this will throw an Error in a future version of PHP) in /home/janus/www/php7-fundamental/controllers/HomeController.php on line 8
+[11-May-2018 10:10:52 Europe/Kiev] PHP Warning:  Use of undefined constant DOMAIN - assumed 'DOMAIN' (this will throw an Error in a future version of PHP) in /home/janus/www/php7-fundamental/controllers/HomeController.php on line 8
+[11-May-2018 10:11:05 Europe/Kiev] PHP Warning:  Use of undefined constant DOMAIN - assumed 'DOMAIN' (this will throw an Error in a future version of PHP) in /home/janus/www/php7-fundamental/controllers/HomeController.php on line 8
+[11-May-2018 10:38:41 Europe/Kiev] PHP Notice:  Trying to get property 'title' of non-object in /home/janus/www/php7-fundamental/controllers/BlogController.php on line 34
+[11-May-2018 11:05:02 Europe/Kiev] PHP Warning:  Use of undefined constant MAXPAGE - assumed 'MAXPAGE' (this will throw an Error in a future version of PHP) in /home/janus/www/php7-fundamental/controllers/BlogController.php on line 24
+[11-May-2018 11:05:02 Europe/Kiev] PHP Warning:  A non-numeric value encountered in /home/janus/www/php7-fundamental/core/Pagination.php on line 141
+[11-May-2018 11:05:02 Europe/Kiev] PHP Warning:  A non-numeric value encountered in /home/janus/www/php7-fundamental/core/Pagination.php on line 147
+[11-May-2018 11:05:29 Europe/Kiev] PHP Warning:  Use of undefined constant MAXPAGE - assumed 'MAXPAGE' (this will throw an Error in a future version of PHP) in /home/janus/www/php7-fundamental/controllers/BlogController.php on line 24
+[11-May-2018 11:05:29 Europe/Kiev] PHP Warning:  A non-numeric value encountered in /home/janus/www/php7-fundamental/core/Pagination.php on line 141
+[11-May-2018 11:05:29 Europe/Kiev] PHP Warning:  A non-numeric value encountered in /home/janus/www/php7-fundamental/core/Pagination.php on line 147
+[11-May-2018 11:25:04 Europe/Kiev] PHP Notice:  Undefined variable: page in /home/janus/www/php7-fundamental/controllers/BlogController.php on line 14
+[11-May-2018 11:35:04 Europe/Kiev] PHP Notice:  Undefined variable: page in /home/janus/www/php7-fundamental/controllers/BlogController.php on line 14
+[11-May-2018 11:35:09 Europe/Kiev] PHP Notice:  Undefined variable: page in /home/janus/www/php7-fundamental/controllers/BlogController.php on line 14
+[11-May-2018 11:35:21 Europe/Kiev] PHP Notice:  Undefined variable: page in /home/janus/www/php7-fundamental/controllers/BlogController.php on line 14
+[11-May-2018 11:35:53 Europe/Kiev] PHP Notice:  Undefined variable: page in /home/janus/www/php7-fundamental/controllers/BlogController.php on line 14
+[11-May-2018 14:10:59 Europe/Kiev] PHP Warning:  include(/home/janus/www/php7-fundamental/config/form.php): failed to open stream: No such file or directory in /home/janus/www/php7-fundamental/core/Form.php on line 10
+[11-May-2018 14:10:59 Europe/Kiev] PHP Warning:  include(): Failed opening '/home/janus/www/php7-fundamental/config/form.php' for inclusion (include_path='.:/usr/share/php') in /home/janus/www/php7-fundamental/core/Form.php on line 10
+[11-May-2018 15:32:16 Europe/Kiev] PHP Notice:  Undefined variable: page in /home/janus/www/php7-fundamental/controllers/BlogController.php on line 14
+[11-May-2018 15:33:11 Europe/Kiev] PHP Notice:  Undefined variable: breadcrumb in /home/janus/www/php7-fundamental/views/blog/search.php on line 8
+[11-May-2018 15:33:11 Europe/Kiev] PHP Notice:  Undefined index: pagination in /home/janus/www/php7-fundamental/views/blog/search.php on line 31
+[11-May-2018 15:33:11 Europe/Kiev] PHP Fatal error:  Uncaught Error: Call to a member function get() on null in /home/janus/www/php7-fundamental/views/blog/search.php:31
+Stack trace:
+#0 /home/janus/www/php7-fundamental/core/View.php(8): require()
+#1 /home/janus/www/php7-fundamental/controllers/BlogController.php(89): View->render('blog/search', Array)
+#2 /home/janus/www/php7-fundamental/core/Router.php(84): BlogController->search(Array)
+#3 /home/janus/www/php7-fundamental/core/Router.php(34): Router->callAction(Object(BlogController), 'search', '/')
+#4 /home/janus/www/php7-fundamental/core/App.php(19): Router->directPath('blog/search', 'POST')
+#5 /home/janus/www/php7-fundamental/bootstrap/bootstrap.php(45): App->init()
+#6 /home/janus/www/php7-fundamental/public/index.php(2): require_once('/home/janus/www...')
+#7 {main}
+  thrown in /home/janus/www/php7-fundamental/views/blog/search.php on line 31
+[11-May-2018 15:34:31 Europe/Kiev] PHP Notice:  Undefined index: pagination in /home/janus/www/php7-fundamental/views/blog/search.php on line 31
+[11-May-2018 15:34:31 Europe/Kiev] PHP Fatal error:  Uncaught Error: Call to a member function get() on null in /home/janus/www/php7-fundamental/views/blog/search.php:31
+Stack trace:
+#0 /home/janus/www/php7-fundamental/core/View.php(8): require()
+#1 /home/janus/www/php7-fundamental/controllers/BlogController.php(94): View->render('blog/search', Array)
+#2 /home/janus/www/php7-fundamental/core/Router.php(84): BlogController->search(Array)
+#3 /home/janus/www/php7-fundamental/core/Router.php(34): Router->callAction(Object(BlogController), 'search', '/')
+#4 /home/janus/www/php7-fundamental/core/App.php(19): Router->directPath('blog/search', 'POST')
+#5 /home/janus/www/php7-fundamental/bootstrap/bootstrap.php(45): App->init()
+#6 /home/janus/www/php7-fundamental/public/index.php(2): require_once('/home/janus/www...')
+#7 {main}
+  thrown in /home/janus/www/php7-fundamental/views/blog/search.php on line 31
+[11-May-2018 15:35:00 Europe/Kiev] PHP Notice:  Undefined variable: page in /home/janus/www/php7-fundamental/controllers/BlogController.php on line 14
+[11-May-2018 15:35:04 Europe/Kiev] PHP Notice:  Undefined index: pagination in /home/janus/www/php7-fundamental/views/blog/search.php on line 31
+[11-May-2018 15:35:04 Europe/Kiev] PHP Fatal error:  Uncaught Error: Call to a member function get() on null in /home/janus/www/php7-fundamental/views/blog/search.php:31
+Stack trace:
+#0 /home/janus/www/php7-fundamental/core/View.php(8): require()
+#1 /home/janus/www/php7-fundamental/controllers/BlogController.php(94): View->render('blog/search', Array)
+#2 /home/janus/www/php7-fundamental/core/Router.php(84): BlogController->search(Array)
+#3 /home/janus/www/php7-fundamental/core/Router.php(34): Router->callAction(Object(BlogController), 'search', '/')
+#4 /home/janus/www/php7-fundamental/core/App.php(19): Router->directPath('blog/search', 'POST')
+#5 /home/janus/www/php7-fundamental/bootstrap/bootstrap.php(45): App->init()
+#6 /home/janus/www/php7-fundamental/public/index.php(2): require_once('/home/janus/www...')
+#7 {main}
+  thrown in /home/janus/www/php7-fundamental/views/blog/search.php on line 31
+[11-May-2018 15:35:50 Europe/Kiev] PHP Notice:  Undefined variable: page in /home/janus/www/php7-fundamental/controllers/BlogController.php on line 14
+[11-May-2018 15:36:35 Europe/Kiev] PHP Notice:  Undefined variable: page in /home/janus/www/php7-fundamental/controllers/BlogController.php on line 14
+[11-May-2018 15:36:38 Europe/Kiev] PHP Notice:  Undefined index: slug in /home/janus/www/php7-fundamental/views/blog/search.php on line 24
+[11-May-2018 15:37:46 Europe/Kiev] PHP Notice:  Undefined variable: page in /home/janus/www/php7-fundamental/controllers/BlogController.php on line 14
+[11-May-2018 15:37:48 Europe/Kiev] PHP Notice:  Undefined variable: page in /home/janus/www/php7-fundamental/controllers/BlogController.php on line 14
+[11-May-2018 15:37:52 Europe/Kiev] PHP Notice:  Undefined index: formated_date in /home/janus/www/php7-fundamental/views/blog/search.php on line 23
+[11-May-2018 15:38:39 Europe/Kiev] PHP Notice:  Undefined variable: page in /home/janus/www/php7-fundamental/controllers/BlogController.php on line 14
+[11-May-2018 15:38:56 Europe/Kiev] PHP Notice:  Undefined variable: page in /home/janus/www/php7-fundamental/controllers/BlogController.php on line 14
+[11-May-2018 15:45:09 Europe/Kiev] PHP Notice:  Undefined variable: page in /home/janus/www/php7-fundamental/controllers/BlogController.php on line 14
+[11-May-2018 15:45:40 Europe/Kiev] PHP Notice:  Undefined variable: page in /home/janus/www/php7-fundamental/controllers/BlogController.php on line 14
+[11-May-2018 15:45:47 Europe/Kiev] PHP Notice:  Undefined variable: page in /home/janus/www/php7-fundamental/controllers/BlogController.php on line 14

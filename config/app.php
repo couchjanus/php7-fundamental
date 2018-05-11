@@ -13,3 +13,6 @@
     define('APPNAME', 'Great Shopaholic');
     define('SLOGAN', 'Lets Build Cool Site');
     define('SESSION_PREFIX', 'shop_');
+
+    define('DOMAIN', 'http://127.0.0.1:8000');
+    define('MAXPAGE', 3);

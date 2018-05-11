@@ -3,6 +3,10 @@ require_once VIEWS.'shared/head.php';
 require_once VIEWS.'shared/navigation.php';
 
 ?>
+<div class="cf"></div>
+
+<div class="breadcrumb"><?= $breadcrumb;?></div>
+
 <div class="content-wrap">
   <?php
   printf("<h1 style='color: #%x%x%x'>%s</h1>", 165, 27, 45, $title);

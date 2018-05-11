@@ -5,6 +5,16 @@ class HomeController extends Controller
 
     public function index()
     {
+        // $breadcrumb = new Breadcrumb();
+
+        // $data['breadcrumb'] = $breadcrumb->build(
+        //     array()
+        // );
+
+        
+        $data['breadcrumb'] = $this->breadcrumb->build(
+            array()
+        );
         $title = 'Our <b>Best Cat Members</b>';
         $data['title'] = $title;
         $data['subtitle'] = 'Lorem Ipsum не є випадковим набором літер';

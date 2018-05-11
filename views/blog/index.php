@@ -3,6 +3,25 @@ require_once VIEWS.'shared/head.php';
 require_once VIEWS.'shared/navigation.php';
 
 ?>
+<div class="cf"></div>
+
+<div class="breadcrumb"><?= $breadcrumb;?></div>
+    <div class="row">
+                          <h4>Search Blog</h4>
+                            <form action="/blog/search" method="post">
+                            <div id="custom-search-input">
+                              <div class="input-group col-md-12">
+                                <input type="text" class="search-query form-control" placeholder="Search" name="query" />
+                                <span class="input-group-btn">
+                                  <button class="btn btn-danger" type="submit">
+                                    <span class=" glyphicon glyphicon-search"></span>
+                                  </button>
+                                </span>
+                              </div>
+                            </div>
+                            </form>
+                          </div>
+    </div>
 <div class="content-wrap">
   <?php
   printf("<h1 style='color: #%x%x%x'>%s</h1>", 165, 27, 45, $title);
@@ -34,7 +53,9 @@ require_once VIEWS.'shared/navigation.php';
     </article> <!-- end entry -->
 
   <?php endforeach ?>
-
+  <div class="middle">
+     <?php echo $data['pagination']->get();?>
+  </div>
 <?php else : ?>
   <h1>No posts found....</h1>
 <?php endif ?>

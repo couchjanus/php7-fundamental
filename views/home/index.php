@@ -3,6 +3,10 @@ require_once VIEWS.'shared/head.php';
 require_once VIEWS.'shared/navigation.php';
 ?>
 
+<div class="cf"></div>
+
+<div class="breadcrumb"><?= $breadcrumb;?></div>
+
 <!-- product Start -->
 <main class="main-container">
     <h1><?php echo $title; ?></h1>        

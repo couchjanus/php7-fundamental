@@ -1,21 +1,21 @@
 <?php
-
 class App
 {
 
-	protected static $registry = [];
+    protected $result = null;
 
-	public static function bind($key, $value)
-	{
-		static::$registry[$key] = $value;
-	}
+    public function __construct()
+    {
+        // Запускаем сессию
+        Session::init();
+    }
 
-	public static function get($key)
-	{
-		if(!array_key_exists($key, static::$registry)){
-			throw new Exception("No {$key} is bound in the container.");
-		}
+    public function init()
+    {
 
-		return static::$registry[$key];
-	}
+        $routesFile = CONFIG.'routes.php';
+
+        Router::load($routesFile)
+            ->directPath(Request::uri(), Request::method());
+    }
 }

@@ -3,9 +3,11 @@
 class Controller {
 
     protected $_view;
+    protected $breadcrumb;
 
     function __construct()
     {
+        $this->breadcrumb = new Breadcrumb();
         $this->_view = new View();
 
     }
